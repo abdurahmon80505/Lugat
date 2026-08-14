@@ -6,23 +6,34 @@ Faylni telefonga ko'chirib, brauzerda ochish kifoya. Internet **umuman** kerak e
 
 ## Nima bor
 
-- **Tungi rejim** — oq yoki och fon yo'q, faqat qorong'i.
-- **Qidiruv** — joy, voqea yoki ism bo'yicha. Apostrofga e'tibor bermaydi:
-  `gor` deb yozsang ham `g'ori` topiladi.
-- **Madina / Makka filtri** — yuqorida, qidiruv yonida.
+- **Kirill / Lotin** — tepadagi tugma bilan almashadi. Asosiysi — **kirill**.
+  Tanlov eslab qolinadi.
+- **Tun / kun rejimi** — telefon sozlamasiga **o'zi ergashadi**; yonidagi
+  tugma bilan qo'lda ham almashtirish mumkin.
+- **Katta, o'qishga oson matn** — asosiy o'lcham 19px, matn 21px,
+  qatorlar keng joylashgan.
+- **Qidiruv** — joy, voqea yoki ism bo'yicha. Yozuvga bog'liq emas:
+  `ғор` ham, `gor` ham bir xil topadi; `каъба`, `каба`, `ka'ba` ham.
+- **Madina / Makka filtri** — Madina birinchi va asosiy.
 - **Accordion kartalar** — yopiq turadi, bosilganda ochiladi.
 - **Google Maps tugmasi** — har kartada:
   `https://www.google.com/maps/search/?api=1&query=LAT,LNG`
-- **Mobil uchun** — Pixel o'lchamida sinalgan, katta matn (17px),
-  barcha tugmalar 48px dan katta, gorizontal skroll yo'q.
+- **Mobil uchun** — Pixel o'lchamida sinalgan; 360px dan katta hamma
+  telefonda panel joyiga sig'adi, gorizontal skroll yo'q.
 - Vanilla JS, framework yo'q, tashqi CDN/shrift/rasm yo'q.
 
 ## Matn
 
 Matn `ziyorat-kartalari.md` dan **aynan** olinadi — bir harf ham
-o'zgartirilmagan. `build/verify_html.py` buni har ikki tomonlama tekshiradi:
-manbadagi har bir bo'lak HTML'da bormi, va HTML'dagi har bir matn manbadan
-kelganmi.
+o'zgartirilmagan. Kirill matn — o'sha lotin matnning transliteratsiyasi:
+faqat yozuv o'zgaradi, so'z va tinish belgilari o'zgarmaydi.
+
+`build/verify_html.py` buni to'rt tomonlama tekshiradi:
+
+1. manbadagi har bir bo'lak HTML'da lotin ko'rinishida bormi;
+2. ko'rinadigan kirill matn aynan o'sha lotinning transliteratsiyasimi;
+3. HTML'da manbadan kelmagan ortiqcha matn yo'qmi;
+4. Maps havolalari va koordinatalar to'g'rimi.
 
 ## Qayta yig'ish
 
@@ -58,6 +69,7 @@ ichiga joylashtiradi. Rasm bo'lmagan kartalar SVG manzarasida qoladi.
 | `build/parse.py` | markdown → strukturaviy ma'lumot |
 | `build/art.py` | 22 ta ichki SVG manzara |
 | `build/build.py` | HTML yig'uvchi (+ base64 rasm) |
+| `build/translit.py` | lotin → kirill transliteratsiyasi |
 | `build/verify_html.py` | matn aynanligini tekshirish |
 | `build/preview.py` | manzaralarni bitta varaqda ko'rish |
 | `build/shot.py` | Pixel o'lchamida skrinshot va tekshiruv |
