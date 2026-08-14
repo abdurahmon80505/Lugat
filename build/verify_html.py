@@ -21,12 +21,12 @@ SKIP = {'script', 'style', 'svg'}
 UI = [
     'Makka–Madina ziyorat kartalari', 'Ziyorat kartalari', 'Makka–Madina · 22 ta joy',
     'Qidiruv: joy, ism, voqea', 'Madina', 'Makka',
-    'Turganingda esla', 'Amaliy', 'Google Maps’da ochish',
+    'Turganingda esla', 'Amaliy', 'da ochish',
     'Hech narsa topilmadi', "Boshqa so'z bilan qidirib ko'r.",
     'Ishlatish tartibi',
 ]
 # Almashmaydigan belgilar (raqam, koordinata, arabcha, ×)
-FIXED = ['Кирилл', 'Lotin', '×']
+FIXED = ['Кирилл', 'Lotin', '×', 'Google Maps’', 'A', 'a']
 
 
 class T(HTMLParser):

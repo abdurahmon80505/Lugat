@@ -31,7 +31,7 @@ with sync_playwright() as pw:
     print('telefon tungi -> fon:', bg)
     print('boshlang\'ich yozuv:', pg.inner_text('.brand h1'))
     print('boshlang\'ich filtr :', pg.eval_on_selector_all(
-        '.filters button', 'e=>e.map(x=>[x.textContent.trim(),x.ariaPressed])'))
+        '.cities button', 'e=>e.map(x=>[x.textContent.trim(),x.ariaPressed])'))
     print('ko\'rinadigan karta :', pg.eval_on_selector_all('.card:not(.hide)', 'e=>e.length'),
           pg.eval_on_selector_all('.card:not(.hide)', 'e=>[...new Set(e.map(x=>x.dataset.city))]'))
     pg.screenshot(path=str(OUT / '01-tun-kirill.png'))
@@ -63,13 +63,53 @@ with sync_playwright() as pw:
         # qidiruv ikkala shaharda ham ishlashi uchun filtrlarni sinaymiz
         res = []
         for cty in ('madina', 'makka'):
-            pg.click(f'.filters button[data-city={cty}]')
+            pg.click(f'.cities button[data-city={cty}]')
             pg.wait_for_timeout(180)
             res += pg.eval_on_selector_all('.card:not(.hide) .name', 'e=>e.map(x=>x.textContent)')
         print(f'  qidiruv {term!r} -> {res}')
     pg.fill('#q', '')
-    pg.click('.filters button[data-city=madina]')
+    pg.click('.cities button[data-city=madina]')
     pg.wait_for_timeout(250)
+
+    # ---------- matn o'lchami tugmasi ----------
+    def px(sel):
+        return pg.eval_on_selector(sel, 'e=>Math.round(parseFloat(getComputedStyle(e).fontSize))')
+
+    def h(sel):
+        return pg.eval_on_selector(sel, 'e=>Math.round(e.getBoundingClientRect().height)')
+
+    chrome0 = [h('.card:not(.hide) .maps'), h('.cities button'), h('#q'), h('.brand h1')]
+    seq = []
+    for _ in range(4):
+        seq.append((px('.body p'), px('.card:not(.hide) .name'),
+                    pg.get_attribute('html', 'data-size'),
+                    pg.get_attribute('#tsz', 'aria-label')))
+        pg.click('#tsz')
+        pg.wait_for_timeout(200)
+    print('\nmatn o\'lchami (matn / sarlavha / holat / yozuv):')
+    for f1, f2, st, lab in seq:
+        print(f'   {f1}px / {f2}px / {st or "katta"} / {lab}')
+    chrome1 = [h('.card:not(.hide) .maps'), h('.cities button'), h('#q'), h('.brand h1')]
+    print('  panel va tugmalar o\'zgarmadi:', chrome0 == chrome1, chrome0)
+
+    # eng kichik o'lchamda filtr hamon ishlaydimi (selektor .cities ga o'zgargan)
+    pg.click('#tsz')
+    pg.wait_for_timeout(150)
+    pg.click('.cities button[data-city=makka]')
+    pg.wait_for_timeout(250)
+    print('  filtr regressiya yo\'q:',
+          pg.eval_on_selector_all('.card:not(.hide)', 'e=>[...new Set(e.map(x=>x.dataset.city))]'),
+          pg.eval_on_selector_all('.card:not(.hide)', 'e=>e.length'))
+    pg.click('.cities button[data-city=madina]')
+    pg.wait_for_timeout(200)
+
+    # Maps yozuvi: brend nomi o'girilmasligi kerak
+    for m, nm in (('c', 'kirill'), ('l', 'lotin')):
+        pg.click(f'.seg button[data-m={m}]')
+        pg.wait_for_timeout(200)
+        print(f'  Maps yozuvi ({nm}):', repr(pg.inner_text('.card:not(.hide) .maps')))
+    pg.click('.seg button[data-m=c]')
+    pg.wait_for_timeout(150)
 
     # mavzuni qo'lda kunduzgiga o'tkazish
     pg.click('#th')
@@ -90,7 +130,7 @@ with sync_playwright() as pw:
     print('\ntelefon kunduzgi -> fon:',
           pg.eval_on_selector('body', 'e=>getComputedStyle(e).backgroundColor'))
     pg.screenshot(path=str(OUT / '05-kun-kirill.png'))
-    pg.click('.filters button[data-city=makka]')
+    pg.click('.cities button[data-city=makka]')
     pg.wait_for_timeout(300)
     pg.click('.card:not(.hide) .head')
     pg.wait_for_timeout(600)
@@ -103,8 +143,8 @@ with sync_playwright() as pw:
     print('shrift (matn)     :', pg.eval_on_selector('.body p', 'e=>getComputedStyle(e).fontSize'))
     for sel, nm in (('.card:not(.hide) .head', 'karta sarlavhasi'),
                     ('.card:not(.hide) .maps', 'Maps tugmasi'),
-                    ('.filters button', 'filtr'), ('.seg button', 'yozuv tugmasi'),
-                    ('#th', 'mavzu tugmasi')):
+                    ('.cities button', 'filtr'), ('.seg button', 'yozuv tugmasi'),
+                    ('#th', 'mavzu tugmasi'), ('#tsz', 'o\'lcham tugmasi')):
         r = pg.eval_on_selector(sel, 'e=>{const r=e.getBoundingClientRect();'
                                      'return [Math.round(r.width),Math.round(r.height)]}')
         print(f'  {nm:18}: {r[0]}x{r[1]}')

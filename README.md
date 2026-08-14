@@ -12,6 +12,11 @@ Faylni telefonga ko'chirib, brauzerda ochish kifoya. Internet **umuman** kerak e
   tugma bilan qo'lda ham almashtirish mumkin.
 - **Katta, o'qishga oson matn** — asosiy o'lcham 19px, matn 21px,
   qatorlar keng joylashgan.
+- **Matn o'lchami** — Мадина/Макка yonidagi **«Aa»** tugmasi. Har bosilganda
+  kichrayadi: Катта (21px) → Ўрта (19px) → Кичик (17px) → Катта. Tugmadagi
+  «Aa» ham joriy o'lchamda ko'rinadi, tanlov esa eslab qolinadi.
+  Faqat o'qish matni o'zgaradi — panel, qidiruv va tugmalar o'z o'lchamida
+  qoladi, shuning uchun barmoqqa qulaylik yo'qolmaydi.
 - **Qidiruv** — joy, voqea yoki ism bo'yicha. Yozuvga bog'liq emas:
   `ғор` ham, `gor` ham bir xil topadi; `каъба`, `каба`, `ka'ba` ham.
 - **Madina / Makka filtri** — Madina birinchi va asosiy.

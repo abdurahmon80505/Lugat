@@ -93,7 +93,10 @@ html{-webkit-text-size-adjust:100%; font-size:19px}  /* katta matn: rem shu yerd
   --madina:#15734c; --makka:#8a5a0d;
   --seg:#eceae2; --shadow:0 1px 2px rgba(30,25,10,.05);
   --acc:var(--makka); --r:18px;
+  --fs:1.1rem;                 /* o'qish matni - Katta (asosiysi) */
 }
+:root[data-size=m]{--fs:1rem}  /* O'rta */
+:root[data-size=s]{--fs:.9rem} /* Kichik */
 /* ---------- tungi: telefon sozlamasiga ergashadi ---------- */
 @media (prefers-color-scheme:dark){
   :root:not([data-theme=light]){
@@ -202,6 +205,7 @@ body{
 #clr.on{display:grid}
 
 .filters{display:flex; gap:9px; margin-top:10px}
+.cities{display:flex; flex:1; gap:9px; min-width:0}
 .filters button{
   flex:1; min-height:50px;
   display:flex; align-items:center; justify-content:center; gap:8px;
@@ -225,6 +229,21 @@ body{
 }
 :root[data-theme=dark] .filters button[aria-pressed=true]{color:#08110d}
 .filters button[aria-pressed=true] .n{background:rgba(0,0,0,.18); color:inherit; opacity:.75}
+
+/* Matn o'lchami: har bosilganda kichrayadi. Ichidagi "Aa" joriy o'lchamni
+   ko'rsatadi, shuning uchun alohida ro'yxat kerak emas.
+   Selektor ".filters .tsz" - ".filters button" dan spetsifikroq, aks holda
+   u yerdagi flex:1 tugmani yarim qatorga cho'zib yuboradi. */
+.filters .tsz{
+  flex:0 0 auto; width:56px; gap:1px;
+  align-items:baseline; line-height:1; color:var(--tx3);
+}
+.filters .tsz .a1{font-size:1.12rem; font-weight:700}
+.filters .tsz .a2{font-size:.8rem; font-weight:600}
+:root[data-size=m] .filters .tsz .a1{font-size:1rem}
+:root[data-size=m] .filters .tsz .a2{font-size:.72rem}
+:root[data-size=s] .filters .tsz .a1{font-size:.88rem}
+:root[data-size=s] .filters .tsz .a2{font-size:.64rem}
 
 /* ---------- ro'yxat ---------- */
 main{padding:16px 12px 0; max-width:780px; margin:0 auto}
@@ -258,7 +277,7 @@ main{padding:16px 12px 0; max-width:780px; margin:0 auto}
   display:block; font-size:.7rem; font-weight:700; letter-spacing:.9px;
   text-transform:uppercase; color:var(--acc); opacity:.9; margin-bottom:3px;
 }
-.name{display:block; font-size:1.1rem; font-weight:650; line-height:1.36; color:var(--tx)}
+.name{display:block; font-size:var(--fs); font-weight:650; line-height:1.36; color:var(--tx)}
 .ar{
   display:block; margin-top:4px; font-size:1rem; color:var(--tx3);
   font-family:"Noto Naskh Arabic","Traditional Arabic",serif; direction:rtl;
@@ -276,14 +295,14 @@ main{padding:16px 12px 0; max-width:780px; margin:0 auto}
 img.art{object-fit:cover}
 .artwrap{position:relative; border-block:1px solid var(--line)}
 .body{padding:17px 16px 19px}
-.body p{margin:0 0 16px; font-size:1.1rem; line-height:1.78; color:var(--tx2)}
+.body p{margin:0 0 16px; font-size:var(--fs); line-height:1.78; color:var(--tx2)}
 .body p:last-of-type{margin-bottom:0}
 
 .note{
   margin-top:17px; padding:15px 16px;
   border-radius:14px; border:1px solid var(--line2);
   background:color-mix(in srgb,var(--tx3) 6%,transparent);
-  font-size:1.1rem; line-height:1.74; color:var(--tx2);
+  font-size:var(--fs); line-height:1.74; color:var(--tx2);
 }
 .note.esla{
   border-color:color-mix(in srgb,var(--acc) 32%,transparent);
@@ -317,7 +336,7 @@ img.art{object-fit:cover}
   border-top:1px solid var(--line)}
 .usage h2{margin:0 0 14px; font-size:.78rem; font-weight:750;
   letter-spacing:1.4px; text-transform:uppercase; color:var(--tx3)}
-.usage p{margin:0 0 14px; font-size:1.1rem; line-height:1.78; color:var(--tx2)}
+.usage p{margin:0 0 14px; font-size:var(--fs); line-height:1.78; color:var(--tx2)}
 .usage p:last-child{margin-bottom:0}
 .usage strong{color:var(--tx); font-weight:700}
 
@@ -331,7 +350,6 @@ img.art{object-fit:cover}
 }
 @media (min-width:620px){
   .brand h1{font-size:1.18rem}
-  .name{font-size:1.16rem}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none !important}}
 """
@@ -342,9 +360,10 @@ JS = r"""
       q=document.getElementById('q'), clr=document.getElementById('clr'),
       empty=document.getElementById('empty'),
       cards=[].slice.call(document.querySelectorAll('.card')),
-      fbtn=[].slice.call(document.querySelectorAll('.filters button')),
+      fbtn=[].slice.call(document.querySelectorAll('.cities button')),
       sbtn=[].slice.call(document.querySelectorAll('.seg button')),
-      city='madina', mode='c';
+      tsz=document.getElementById('tsz'),
+      city='madina', mode='c', size=0;
 
   function save(k,v){ try{localStorage.setItem(k,v);}catch(e){} }
   function load(k){ try{return localStorage.getItem(k);}catch(e){return null;} }
@@ -361,10 +380,24 @@ JS = r"""
     root.lang = m==='l' ? 'uz' : 'uz-Cyrl';
     sbtn.forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.m===m?'true':'false'); });
     save('yozuv',m);
+    setSize(size);                 // o'lcham yozuvi ham yangi yozuvda bo'lsin
   }
   sbtn.forEach(function(b){
     b.addEventListener('click',function(){ setScript(b.dataset.m); });
   });
+
+  /* ---------- matn o'lchami: bosgan sari kichrayadi ---------- */
+  var SZ=['','m','s'],                                  // '' = Katta
+      SZN={c:['Катта','Ўрта','Кичик'], l:['Katta',"O'rta",'Kichik']};
+  function setSize(i){
+    size=i;
+    if(SZ[i]) root.setAttribute('data-size',SZ[i]); else root.removeAttribute('data-size');
+    var nm=SZN[mode==='l'?'l':'c'][i];
+    tsz.setAttribute('aria-label', (mode==='l'?"Matn o'lchami: ":'Матн ўлчами: ')+nm);
+    tsz.title=nm;
+    save('olcham', String(i));
+  }
+  tsz.addEventListener('click',function(){ setSize((size+1)%3); });
 
   /* ---------- mavzu: telefon sozlamasi + qo'lda ---------- */
   function setTheme(t){
@@ -427,6 +460,10 @@ JS = r"""
     });
   });
 
+  // o'lcham yozuvdan OLDIN tiklanadi: setScript() setSize() ni chaqiradi va
+  // aks holda saqlangan qiymat o'qilgunicha ustidan yozib yuborilardi
+  var sz=parseInt(load('olcham')||'0',10);
+  setSize(sz>=0&&sz<=2 ? sz : 0);                  // asosiysi - Katta
   setScript(load('yozuv')==='l' ? 'l' : 'c');      // asosiysi - kirill
   var th=load('mavzu'); if(th) setTheme(th);       // yo'q bo'lsa telefonga ergashadi
   apply();
@@ -468,8 +505,9 @@ def card_html(c):
         body += f'<div class="note amaliy">{T("Amaliy", "b")}{T(c["practical"])}</div>'
 
     maps = f'https://www.google.com/maps/search/?api=1&query={c["lat"]},{c["lng"]}'
+    # "Google Maps" - brend nomi, o'girilmaydi; faqat qo'shimcha almashadi
     body += (f'<a class="maps" href="{e(maps)}" target="_blank" rel="noopener noreferrer">'
-             f'{I_PIN}{T("Google Maps’da ochish")}</a>')
+             f'{I_PIN}<span><span>Google Maps’</span>{T("da ochish")}</span></a>')
     coord = f'{c["lat"]}, {c["lng"]}'
     if c['coordNote']:
         coord += ' ' + T(f'({c["coordNote"]})', 'i')
@@ -532,9 +570,13 @@ def main():
            placeholder="{e(to_cyrillic(ph))}" aria-label="Карталар ичидан қидириш">
     <button id="clr" type="button" aria-label="Тозалаш">&times;</button>
   </div>
-  <div class="filters" role="group" aria-label="Shahar">
-    <button type="button" data-city="madina" aria-pressed="true">{T('Madina')} <span class="n">{n_mad}</span></button>
-    <button type="button" data-city="makka" aria-pressed="false">{T('Makka')} <span class="n">{n_mak}</span></button>
+  <div class="filters">
+    <div class="cities" role="group" aria-label="Shahar">
+      <button type="button" data-city="madina" aria-pressed="true">{T('Madina')} <span class="n">{n_mad}</span></button>
+      <button type="button" data-city="makka" aria-pressed="false">{T('Makka')} <span class="n">{n_mak}</span></button>
+    </div>
+    <button id="tsz" class="tsz" type="button" aria-label="Матн ўлчами">
+      <span class="a1">A</span><span class="a2">a</span></button>
   </div>
 </header>
 
