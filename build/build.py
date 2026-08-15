@@ -235,15 +235,18 @@ body{
    Selektor ".filters .tsz" - ".filters button" dan spetsifikroq, aks holda
    u yerdagi flex:1 tugmani yarim qatorga cho'zib yuboradi. */
 .filters .tsz{
-  flex:0 0 auto; width:56px; gap:1px;
-  align-items:baseline; line-height:1; color:var(--tx3);
+  flex:0 0 auto; width:68px; padding:0;
+  display:grid; place-items:center;              /* markazda tursin */
+  color:var(--tx3);
 }
-.filters .tsz .a1{font-size:1.12rem; font-weight:700}
-.filters .tsz .a2{font-size:.8rem; font-weight:600}
-:root[data-size=m] .filters .tsz .a1{font-size:1rem}
-:root[data-size=m] .filters .tsz .a2{font-size:.72rem}
-:root[data-size=s] .filters .tsz .a1{font-size:.88rem}
-:root[data-size=s] .filters .tsz .a2{font-size:.64rem}
+/* "A" va "a" bitta matn oqimida - o'zi bir xil chiziqqa tushadi */
+.filters .tsz .aa{line-height:1; white-space:nowrap}
+.filters .tsz .a1{font-size:1.15rem; font-weight:700}
+.filters .tsz .a2{font-size:.82rem; font-weight:600}
+:root[data-size=m] .filters .tsz .a1{font-size:1.02rem}
+:root[data-size=m] .filters .tsz .a2{font-size:.74rem}
+:root[data-size=s] .filters .tsz .a1{font-size:.9rem}
+:root[data-size=s] .filters .tsz .a2{font-size:.66rem}
 
 /* ---------- ro'yxat ---------- */
 main{padding:16px 12px 0; max-width:780px; margin:0 auto}
@@ -575,8 +578,8 @@ def main():
       <button type="button" data-city="madina" aria-pressed="true">{T('Madina')} <span class="n">{n_mad}</span></button>
       <button type="button" data-city="makka" aria-pressed="false">{T('Makka')} <span class="n">{n_mak}</span></button>
     </div>
-    <button id="tsz" class="tsz" type="button" aria-label="Матн ўлчами">
-      <span class="a1">A</span><span class="a2">a</span></button>
+    <button id="tsz" class="tsz" type="button" aria-label="Матн ўлчами"><span
+      class="aa"><span class="a1">A</span><span class="a2">a</span></span></button>
   </div>
 </header>
 
