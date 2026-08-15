@@ -93,10 +93,13 @@ html{-webkit-text-size-adjust:100%; font-size:19px}  /* katta matn: rem shu yerd
   --madina:#15734c; --makka:#8a5a0d;
   --seg:#eceae2; --shadow:0 1px 2px rgba(30,25,10,.05);
   --acc:var(--makka); --r:18px;
-  --fs:1.1rem;                 /* o'qish matni - Katta (asosiysi) */
+  /* Matn o'lchami: --k hamma narsani mutanosib kichraytiradi,
+     --sh esa quti balandligini biroz pasaytiradi (46px dan pastga tushmaydi). */
+  --k:1; --sh:0px;             /* Katta - asosiysi */
+  --fs:calc(1.1rem * var(--k));
 }
-:root[data-size=m]{--fs:1rem}  /* O'rta */
-:root[data-size=s]{--fs:.9rem} /* Kichik */
+:root[data-size=m]{--k:.909; --sh:2px}   /* O'rta */
+:root[data-size=s]{--k:.818; --sh:4px}   /* Kichik */
 /* ---------- tungi: telefon sozlamasiga ergashadi ---------- */
 @media (prefers-color-scheme:dark){
   :root:not([data-theme=light]){
@@ -188,10 +191,10 @@ body{
   fill:none; stroke:var(--tx3); stroke-width:2; pointer-events:none;
 }
 #q{
-  width:100%; height:54px; padding:0 50px 0 47px;
+  width:100%; height:calc(54px - var(--sh)); padding:0 50px 0 47px;
   background:var(--card); color:var(--tx);
   border:1px solid var(--line2); border-radius:14px;
-  font:inherit; font-size:.95rem;
+  font:inherit; font-size:calc(.95rem * var(--k));
 }
 #q::placeholder{color:var(--tx3)}
 #q:focus{border-color:var(--acc); outline:none;
@@ -207,15 +210,15 @@ body{
 .filters{display:flex; gap:9px; margin-top:10px}
 .cities{display:flex; flex:1; gap:9px; min-width:0}
 .filters button{
-  flex:1; min-height:50px;
+  flex:1; min-height:calc(50px - var(--sh));
   display:flex; align-items:center; justify-content:center; gap:8px;
   background:var(--card); color:var(--tx2);
   border:1px solid var(--line2); border-radius:14px;
-  font:inherit; font-size:1rem; font-weight:600; cursor:pointer;
+  font:inherit; font-size:calc(1rem * var(--k)); font-weight:600; cursor:pointer;
   -webkit-tap-highlight-color:transparent;
 }
 .filters button .n{
-  font-size:.78rem; color:var(--tx3); font-variant-numeric:tabular-nums;
+  font-size:calc(.78rem * var(--k)); color:var(--tx3); font-variant-numeric:tabular-nums;
   background:color-mix(in srgb,var(--tx3) 14%,transparent);
   padding:2px 8px; border-radius:20px;
 }
@@ -241,12 +244,8 @@ body{
 }
 /* "A" va "a" bitta matn oqimida - o'zi bir xil chiziqqa tushadi */
 .filters .tsz .aa{line-height:1; white-space:nowrap}
-.filters .tsz .a1{font-size:1.15rem; font-weight:700}
-.filters .tsz .a2{font-size:.82rem; font-weight:600}
-:root[data-size=m] .filters .tsz .a1{font-size:1.02rem}
-:root[data-size=m] .filters .tsz .a2{font-size:.74rem}
-:root[data-size=s] .filters .tsz .a1{font-size:.9rem}
-:root[data-size=s] .filters .tsz .a2{font-size:.66rem}
+.filters .tsz .a1{font-size:calc(1.15rem * var(--k)); font-weight:700}
+.filters .tsz .a2{font-size:calc(.82rem * var(--k)); font-weight:600}
 
 /* ---------- ro'yxat ---------- */
 main{padding:16px 12px 0; max-width:780px; margin:0 auto}

@@ -78,19 +78,34 @@ with sync_playwright() as pw:
     def h(sel):
         return pg.eval_on_selector(sel, 'e=>Math.round(e.getBoundingClientRect().height)')
 
-    chrome0 = [h('.card:not(.hide) .maps'), h('.cities button'), h('#q'), h('.brand h1')]
+    def snap():
+        return dict(matn=px('.body p'), sarlavha=px('.card:not(.hide) .name'),
+                    shahar=px('.cities button'), qidiruv=px('#q'),
+                    shaharH=h('.cities button'), qidiruvH=h('#q'),
+                    maps=h('.card:not(.hide) .maps'), brand=h('.brand h1'))
+
     seq = []
     for _ in range(4):
-        seq.append((px('.body p'), px('.card:not(.hide) .name'),
-                    pg.get_attribute('html', 'data-size'),
-                    pg.get_attribute('#tsz', 'aria-label')))
+        seq.append((pg.get_attribute('html', 'data-size'),
+                    pg.get_attribute('#tsz', 'aria-label'), snap()))
         pg.click('#tsz')
         pg.wait_for_timeout(200)
-    print('\nmatn o\'lchami (matn / sarlavha / holat / yozuv):')
-    for f1, f2, st, lab in seq:
-        print(f'   {f1}px / {f2}px / {st or "katta"} / {lab}')
-    chrome1 = [h('.card:not(.hide) .maps'), h('.cities button'), h('#q'), h('.brand h1')]
-    print('  panel va tugmalar o\'zgarmadi:', chrome0 == chrome1, chrome0)
+    print('\nmatn o\'lchami:')
+    for st, lab, s in seq:
+        print(f'   {st or "katta":6} matn={s["matn"]} sarlavha={s["sarlavha"]} '
+              f'shahar={s["shahar"]}({s["shaharH"]}px) qidiruv={s["qidiruv"]}({s["qidiruvH"]}px)'
+              f'  [{lab}]')
+    katta, kichik = seq[0][2], seq[2][2]
+    kichrayadi = [k for k in ('matn', 'sarlavha', 'shahar', 'qidiruv')
+                  if not kichik[k] < katta[k]]
+    print('  kichrayadi (matn/sarlavha/shahar/qidiruv):',
+          'hammasi' if not kichrayadi else f'KICHRAYMADI {kichrayadi}')
+    print('  Maps va sarlavha panelига tegilmadi:',
+          katta['maps'] == kichik['maps'] and katta['brand'] == kichik['brand'],
+          f'(maps {katta["maps"]}px, brand {katta["brand"]}px)')
+    print('  barmoq uchun eng kichik quti >=46px:',
+          min(kichik['shaharH'], kichik['qidiruvH']) >= 46,
+          f'({kichik["shaharH"]}px / {kichik["qidiruvH"]}px)')
 
     # eng kichik o'lchamda filtr hamon ishlaydimi (selektor .cities ga o'zgargan)
     pg.click('#tsz')

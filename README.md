@@ -13,10 +13,18 @@ Faylni telefonga ko'chirib, brauzerda ochish kifoya. Internet **umuman** kerak e
 - **Katta, o'qishga oson matn** — asosiy o'lcham 19px, matn 21px,
   qatorlar keng joylashgan.
 - **Matn o'lchami** — Мадина/Макка yonidagi **«Aa»** tugmasi. Har bosilganda
-  kichrayadi: Катта (21px) → Ўрта (19px) → Кичик (17px) → Катта. Tugmadagi
-  «Aa» ham joriy o'lchamda ko'rinadi, tanlov esa eslab qolinadi.
-  Faqat o'qish matni o'zgaradi — panel, qidiruv va tugmalar o'z o'lchamida
-  qoladi, shuning uchun barmoqqa qulaylik yo'qolmaydi.
+  kichrayadi: Катта → Ўрта → Кичик → Катта. Tugmadagi «Aa» ham joriy
+  o'lchamda ko'rinadi, tanlov esa eslab qolinadi.
+
+  | | Katta | O'rta | Kichik |
+  |---|---|---|---|
+  | karta matni va sarlavhalari | 21px | 19px | 17px |
+  | Мадина / Макка | 19px | 17px | 16px |
+  | qidiruv | 18px | 16px | 15px |
+
+  Tugma qutilari ham biroz pasayadi, lekin **46px dan pastga tushmaydi** —
+  barmoqqa qulaylik yo'qolmaydi. Google Maps tugmasi va yuqoridagi sarlavha
+  o'z o'lchamida qoladi.
 - **Qidiruv** — joy, voqea yoki ism bo'yicha. Yozuvga bog'liq emas:
   `ғор` ham, `gor` ham bir xil topadi; `каъба`, `каба`, `ka'ba` ham.
 - **Madina / Makka filtri** — Madina birinchi va asosiy.
