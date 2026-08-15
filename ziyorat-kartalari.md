@@ -17,7 +17,7 @@ Ayvonida "Suffa ahli" yashardi — uysiz, kasbsiz kambag'al sahobalar. Abu Huray
 
 Dastlab xutbani xurmo tanasiga suyanib qilardilar. Minbar yasalgach o'sha tana bola yig'lagandek ovoz chiqargan; Payg'ambar ﷺ tushib uni quchoqlaganlarida tinchigan.
 
-**Turganingda esla:** oyog'ing ostidagi sovutilgan marmar ostida — qorniga ochlikdan tosh bog'lab yurgan odamlarning izi bor.
+**Turganingizda eslang:** oyog'ingiz ostidagi sovutilgan marmar ostida — qorniga ochlikdan tosh bog'lab yurgan odamlarning izi bor.
 
 ---
 
@@ -32,9 +32,9 @@ Yonlarida Abu Bakr r.a. (13 h.) va Umar r.a. (23 h.) yotibdi. Uchinchi bo'sh joy
 
 Minbar bilan hujra orasidagi maydon — hadisda "jannat bog'chalaridan bir bog'cha" deb atalgan Ravza.
 
-**Turganingda esla:** siyratda eshitgan hamma narsa — Hiro, Toif, Badr, Uhud, Hudaybiya, Makka fathi — shu bir necha metr yerda tugagan.
+**Turganingizda eslang:** siyratda eshitgan hamma narsa — Hiro, Toif, Badr, Uhud, Hudaybiya, Makka fathi — shu bir necha metr yerda tugagan.
 
-**Amaliy:** salom berib o'tiladi, to'xtab qolinmaydi. Duoni qiblaga burilib qil — qabrga yuzlanib duo qilsang qo'riqchi to'xtatadi.
+**Amaliy:** salom berib o'tiladi, to'xtab qolinmaydi. Duoni qiblaga burilib qiling — qabrga yuzlanib duo qilsangiz qo'riqchi to'xtatadi.
 
 ---
 
@@ -49,7 +49,7 @@ O'sha kuni quyosh tutilgan. Odamlar "Payg'ambar o'g'li vafot etgani uchun" deyis
 
 Payg'ambar ﷺ tunda chiqib Baqiy ahliga duo qilar edilar.
 
-**Turganingda esla:** ismini bilgan sahobalaringning ko'pchiligi ana shu bir gektar yerda.
+**Turganingizda eslang:** ismini bilgan sahobalaringizning ko'pchiligi ana shu bir gektar yerda.
 
 ---
 
@@ -64,7 +64,7 @@ Boshda musulmonlar g'olib keldi. Kamonchilar o'lja yig'ilayotganini ko'rib tushi
 
 "Uhud — bizni sevadigan, biz sevadigan tog'" deganlar.
 
-**Turganingda esla:** mag'lubiyat dushman kuchidan emas, ellik kishining o'z joyini erta tashlaganidan chiqqan. Tepalik hozir ham o'sha yerda — qanchalik kichikligini ko'rasan.
+**Turganingizda eslang:** mag'lubiyat dushman kuchidan emas, ellik kishining o'z joyini erta tashlaganidan chiqqan. Tepalik hozir ham o'sha yerda — qanchalik kichikligini ko'rasiz.
 
 ---
 
@@ -77,7 +77,7 @@ Hijratda Madinaga kirishdan oldin shu qishloqda o'n to'rt kun turdilar va islomd
 
 Payg'ambar ﷺ Madinada har shanba, ba'zan piyoda, ba'zan ulovda Qubaga borar edilar.
 
-**Turganingda esla:** o'n uch yil quvg'indan keyin qurilgan birinchi bino — masjid bo'lgan, uy emas.
+**Turganingizda eslang:** o'n uch yil quvg'indan keyin qurilgan birinchi bino — masjid bo'lgan, uy emas.
 
 ---
 
@@ -88,7 +88,7 @@ Hijratdan keyin taxminan 16–17 oy Baytul Maqdisga qarab namoz o'qildi. Payg'am
 
 Shu masjidda, peshin namozining o'rtasida qibla burilishi haqidagi oyat nozil bo'ldi. Jamoat namozni buzmasdan, saf bilan orqaga burilib davom ettirdi.
 
-**Turganingda esla:** "ikki qiblali masjid" nomi shundan — bir namoz ikki tomonga o'qilgan.
+**Turganingizda eslang:** "ikki qiblali masjid" nomi shundan — bir namoz ikki tomonga o'qilgan.
 
 ---
 
@@ -105,7 +105,7 @@ Qattiq bir tosh chiqdi, Payg'ambar ﷺ o'zlari urdilar — har zarbada uchqun ch
 
 Bir oyga yaqin qamaldan keyin qattiq sovuq shamol chodirlarni ag'darib, qo'shin tarqab ketdi.
 
-**Turganingda esla:** bu yerda hech qanday jang bo'lmagan — qamal, ochlik va sabr bilan yutilgan.
+**Turganingizda eslang:** bu yerda hech qanday jang bo'lmagan — qamal, ochlik va sabr bilan yutilgan.
 
 ---
 
@@ -116,7 +116,7 @@ Madina ahli va shu tomondan keladiganlar uchun ehrom bog'lash chegarasi. Payg'am
 
 Bu vodiy haqida "Bu muborak vodiyda namoz o'qi" deb aytilgan.
 
-**Turganingda esla:** Makkaga qarab birinchi "Labbayk" shu yerdan aytilgan — sen ham shu yerdan aytasan.
+**Turganingizda eslang:** Makkaga qarab birinchi "Labbayk" shu yerdan aytilgan — siz ham shu yerdan aytasiz.
 
 ---
 
@@ -133,7 +133,7 @@ Payg'ambarlikdan oldin, taxminan 35 yoshlarida, Ka'ba ta'mirlanganda qabilalar H
 
 8-hijriy, Makka fathi: Ka'ba atrofidagi 360 but sindirilib, "Haq keldi, botil yo'q bo'ldi" oyati o'qildi. Bilol r.a. Ka'ba ustiga chiqib azon aytdi — yigirma yil oldin shu maydonda tosh ostida qiynalgan qul.
 
-**Turganingda esla:** tavof qilayotgan doirang — Bilol r.a. azon aytgan joyning tagi.
+**Turganingizda eslang:** tavof qilayotgan doirangiz — Bilol r.a. azon aytgan joyning tagi.
 
 ---
 
@@ -144,7 +144,7 @@ Ibrohim a.s. Ka'ba devori balandlashganda ustiga chiqib turgan tosh. Oyoq izi qo
 
 Tavofdan keyin "Maqomi Ibrohimni namozgoh qilinglar" oyatiga ko'ra shu yaqinda ikki rakat o'qiladi.
 
-**Turganingda esla:** Ismoil a.s. tosh uzatib turgan, otasi devor terayotgan edi — shu ikki kishining ishi.
+**Turganingizda eslang:** Ismoil a.s. tosh uzatib turgan, otasi devor terayotgan edi — shu ikki kishining ishi.
 
 ---
 
@@ -157,7 +157,7 @@ Oisha r.a. Ka'ba ichida namoz o'qishni so'raganda, Payg'ambar ﷺ Hijrni ko'rsat
 
 Rivoyatga ko'ra Hojar onamiz va Ismoil a.s. shu yerda dafn qilingan.
 
-**Turganingda esla:** bu yerdagi ikki rakat — Ka'ba ichida o'qilgan hisoblanadi.
+**Turganingizda eslang:** bu yerdagi ikki rakat — Ka'ba ichida o'qilgan hisoblanadi.
 
 ---
 
@@ -172,7 +172,7 @@ Suv ustida qabilalar joylashib, Makka shu quduq atrofida shahar bo'ldi.
 
 Asrlar o'tib quduq ko'milib, o'rni unutildi. Payg'ambar ﷺning bobolari Abdulmuttalib tush ko'rib qayta ochdi — Payg'ambar ﷺ tug'ilishlaridan oz oldin.
 
-**Turganingda esla:** ichayotgan suving — bir onaning yugurishi bilan chiqqan, va shahar undan keyin paydo bo'lgan.
+**Turganingizda eslang:** ichayotgan suvingiz — bir onaning yugurishi bilan chiqqan, va shahar undan keyin paydo bo'lgan.
 
 ---
 
@@ -185,7 +185,7 @@ Lekin bu yerda ikkinchi voqea ham bor: da'vatning uch yili maxfiy o'tgach, Payg'
 
 O'sha yerda Abu Lahab: "Halok bo'lgin, shuning uchun to'pladingmi?" dedi. Masad surasi shu haqda nozil bo'ldi.
 
-**Turganingda esla:** sa'y qilib yuguradigan joying — birinchi ochiq da'vat minbari ham bo'lgan.
+**Turganingizda eslang:** sa'y qilib yuguradigan joyingiz — birinchi ochiq da'vat minbari ham bo'lgan.
 
 ---
 
@@ -196,7 +196,7 @@ Sa'yning ikkinchi uchi. Safo va Marva orasi taxminan 400 metr; borib-kelib yetti
 
 "Safo va Marva Allohning belgilaridandir" (Baqara 158) — ya'ni bu yugurish shariatda saqlab qolindi.
 
-**Turganingda esla:** yetti marta borib-kelayotganing — chaqalog'i uchun suv qidirgan bir ayolning harakati, va u to abadgacha ibodatga aylantirilgan.
+**Turganingizda eslang:** yetti marta borib-kelayotganingiz — chaqalog'i uchun suv qidirgan bir ayolning harakati, va u to abadgacha ibodatga aylantirilgan.
 
 ---
 
@@ -211,7 +211,7 @@ Titrab tushib kelib "Meni o'rab qo'ying" dedilar. Xadicha r.a. qo'rqmadi, aksinc
 
 Varaqa ibn Navfal buni eshitib: "Bu — Musoga kelgan Nomus. Qavming seni chiqarib yuborishida bo'lsaydim" dedi.
 
-**Turganingda esla:** g'or tepada, tik yo'l bilan chiqiladi — qirq yoshli odam buni muntazam qilgan, hech kim ko'rmasdan.
+**Turganingizda eslang:** g'or tepada, tik yo'l bilan chiqiladi — qirq yoshli odam buni muntazam qilgan, hech kim ko'rmasdan.
 
 ---
 
@@ -224,7 +224,7 @@ Ta'qibchilar g'or og'ziga yetib keldi. Abu Bakr r.a. yig'ladi — o'zi uchun ema
 
 Abdulloh ibn Abu Bakr kechalari xabar keltirar, Asmo r.a. ovqat tashirdi, cho'pon qo'ylarni haydab iz o'chirardi.
 
-**Turganingda esla:** g'or Madina tomonda emas — teskari tomonda. Tavakkul rejasizlik degani emasligi shundan ko'rinadi.
+**Turganingizda eslang:** g'or Madina tomonda emas — teskari tomonda. Tavakkul rejasizlik degani emasligi shundan ko'rinadi.
 
 ---
 
@@ -237,7 +237,7 @@ Keyingi yili o'n ikki kishi, undan keyingi yili yetmish uch kishi kelib bay'at b
 
 Bu yerda Ibrohim a.s.ni o'g'lini qurbonlik qilishdan qaytarmoqchi bo'lgan shaytonga tosh otgani ham eslanadi.
 
-**Turganingda esla:** Makkada eshitmagan odamlar, ming kilometr naridan haj uchun kelgan yotlar eshitgan.
+**Turganingizda eslang:** Makkada eshitmagan odamlar, ming kilometr naridan haj uchun kelgan yotlar eshitgan.
 
 ---
 
@@ -252,7 +252,7 @@ Xutbada: qon va molning daxlsizligi, johiliyat qasoslari va ribo bekor qilingani
 
 O'sha kuni "Bugun dinigizni komil qildim" oyati nozil bo'ldi. Umar r.a. buni eshitib yig'lagan — kamolot tugash degani ekanini tushungan.
 
-**Turganingda esla:** bu xutbadan uch oy o'tib vafot etdilar.
+**Turganingizda eslang:** bu xutbadan uch oy o'tib vafot etdilar.
 
 ---
 
@@ -261,7 +261,7 @@ O'sha kuni "Bugun dinigizni komil qildim" oyati nozil bo'ldi. Umar r.a. buni esh
 
 Arafotdan qaytgach shu yerda tunab, shom va xufton birga o'qiladi. Payg'ambar ﷺ shu yerda ochiq osmon ostida yotganlar.
 
-**Turganingda esla:** hech qanday bino yo'q — hamma bir xil holatda yerga yotadi.
+**Turganingizda eslang:** hech qanday bino yo'q — hamma bir xil holatda yerga yotadi.
 
 ---
 
@@ -274,7 +274,7 @@ Payg'ambarlikning o'ninchi yilida ketma-ket Abu Tolib va Xadicha r.a. vafot etdi
 
 Shundan keyin Toifga borib tosh bo'ronidan qaytdilar. Isro va Me'roj ana shu eng og'ir davrdan keyin bo'ldi.
 
-**Turganingda esla:** Xadicha r.a. birinchi vahiyda "sen aqldan ozmagansan" degan yagona odam edi — va Makka fathini ko'rmay ketdi.
+**Turganingizda eslang:** Xadicha r.a. birinchi vahiyda "sen aqldan ozmagansan" degan yagona odam edi — va Makka fathini ko'rmay ketdi.
 
 ---
 
@@ -287,7 +287,7 @@ Halima Sa'diya enagalikka olib cho'lga ketgan; qabila u kishi kelgach barakat ko
 
 Bino hozir kutubxona (Maktabatu Makkatal Mukarrama) — ziyoratgoh emas.
 
-**Turganingda esla:** yetim tug'ilgan, yetim o'sgan. Masjid uchun yer sotib olgani ikki yetimdan bo'lgani tasodif emas.
+**Turganingizda eslang:** yetim tug'ilgan, yetim o'sgan. Masjid uchun yer sotib olgani ikki yetimdan bo'lgani tasodif emas.
 
 ---
 
@@ -300,12 +300,12 @@ Bolalarning ochlikdan yig'lashi tashqaridan eshitilar, odamlar daraxt bargi yer 
 
 Uch yildan keyin boykot bitigi kuya yeb ketgani ma'lum bo'lgach, bir necha qurayshlik uni bekor qildi.
 
-**Turganingda esla:** Toif ham, Yil ul-huzn ham shundan keyin kelgan — eng og'ir davr uzoq davom etgan.
+**Turganingizda eslang:** Toif ham, Yil ul-huzn ham shundan keyin kelgan — eng og'ir davr uzoq davom etgan.
 
 ---
 
 # ISHLATISH TARTIBI
 
-Joyga kirishdan **oldin** o'sha kartani bir daqiqa o'qi, keyin telefonni cho'ntakka sol. Ichkarida o'qima.
+Joyga kirishdan **oldin** o'sha kartani bir daqiqa o'qing, keyin telefonni cho'ntakka soling. Ichkarida o'qimang.
 
-Har joydan keyin bitta jumla yoz: nima his qilding. Bu keyin butun safarni ushlab turadi.
+Har joydan keyin bitta jumla yozing: nima his qildingiz. Bu keyin butun safarni ushlab turadi.

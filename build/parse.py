@@ -97,7 +97,7 @@ def parse(md_path):
             i += 1
             continue
 
-        m = re.match(r'^\*\*Turganingda esla:\*\*\s*(.+)$', s)
+        m = re.match(r'^\*\*Turganingizda eslang:\*\*\s*(.+)$', s)
         if m:
             card['remember'] = m.group(1).strip()
             i += 1

@@ -21,8 +21,8 @@ SKIP = {'script', 'style', 'svg'}
 UI = [
     'Makka–Madina ziyorat kartalari', 'Ziyorat kartalari', 'Makka–Madina · 22 ta joy',
     'Qidiruv: joy, ism, voqea', 'Madina', 'Makka',
-    'Turganingda esla', 'Amaliy', 'da ochish',
-    'Hech narsa topilmadi', "Boshqa so'z bilan qidirib ko'r.",
+    'Turganingizda eslang', 'Amaliy', 'da ochish',
+    'Hech narsa topilmadi', "Boshqa so'z bilan qidirib ko'ring.",
     'Ishlatish tartibi',
 ]
 # Almashmaydigan belgilar (raqam, koordinata, arabcha, ×)

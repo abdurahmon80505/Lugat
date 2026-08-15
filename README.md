@@ -37,6 +37,11 @@ Faylni telefonga ko'chirib, brauzerda ochish kifoya. Internet **umuman** kerak e
 
 ## Matn
 
+Matn hurmat shaklida — «siz»lab yozilgan (Турганингизда эсланг, ўқинг,
+ёзинг), shuning uchun yoshi katta odamga ham yuborish mumkin. Tarixiy
+iqtiboslar — Умар р.а., Хадича р.а., Пайғамбар ﷺ soʻzlari — asl holida
+qoldirilgan, ular oʻzgartirilmaydi.
+
 Matn `ziyorat-kartalari.md` dan **aynan** olinadi — bir harf ham
 o'zgartirilmagan. Kirill matn — o'sha lotin matnning transliteratsiyasi:
 faqat yozuv o'zgaradi, so'z va tinish belgilari o'zgarmaydi.

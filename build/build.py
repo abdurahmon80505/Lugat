@@ -501,7 +501,7 @@ def card_html(c):
     hay = norm(src) + ' ' + norm(to_cyrillic(src))
 
     body = ''.join(T(p, 'p') for p in c['body'])
-    body += (f'<div class="note esla">{T("Turganingda esla", "b")}'
+    body += (f'<div class="note esla">{T("Turganingizda eslang", "b")}'
              f'{T(c["remember"])}</div>')
     if c['practical']:
         body += f'<div class="note amaliy">{T("Amaliy", "b")}{T(c["practical"])}</div>'
@@ -584,7 +584,7 @@ def main():
 
 <main>
 {''.join(card_html(c) for c in cards)}
-<div id="empty">{T('Hech narsa topilmadi', 'b')}{T("Boshqa so'z bilan qidirib ko'r.")}</div>
+<div id="empty">{T('Hech narsa topilmadi', 'b')}{T("Boshqa so'z bilan qidirib ko'ring.")}</div>
 </main>
 
 <section class="usage">
